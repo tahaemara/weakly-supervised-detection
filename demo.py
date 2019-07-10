@@ -26,7 +26,7 @@ data_transforms = {
     ]),
 }
 cv2.namedWindow('Results', cv2.WINDOW_NORMAL)
-cv2.resizeWindow('Results', 600, 400)
+cv2.resizeWindow('Results', 900, 400)
 
 extracted_features = []
 
