@@ -131,7 +131,7 @@ def main(args):
 
     model.layer4.register_forward_hook(get_feature)
     params = list(model.parameters())
-    weight_softmax = np.squeeze(params[-2].data.numpy())
+    weight_softmax = np.squeeze(params[-2].to(device).data.numpy())
     image, opencv_image = load_image(args.image_path)
     get_cam(model, weight_softmax, image, opencv_image)
 
